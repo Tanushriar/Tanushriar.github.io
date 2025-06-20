@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Media Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* —— Base & Typography —— */
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #222;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      header p {
+        margin: 8px 0 0;
+        font-weight: 400;
+      }
+
+      section {
+        padding: 40px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #ddd;
+        color: #222;
+      }
+
+      /* —— Grid Layouts —— */
+      .media-grid {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      .pdf-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* —— Item Styling & Hover —— */
+      .media-grid > * {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .media-grid > *:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* —— Preserve Original Sizing —— */
+      img {
+        height: 70%;
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      audio {
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      video {
+        height: 70%;
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 0 auto;
+      }
+
+      /* —— PDF Styling —— */
+      iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 600px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      /* —— Responsive PDF Flow —— */
+      @media (max-width: 768px) {
+        .pdf-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .hero {
+        background-color: #fff;
+        padding: 40px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+        margin-top: 30px;
+      }
+
+      .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .hero-text h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tanushri Anand Ramina's Portfolio</h1>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Hi, I’m Tanushri Anand Ramina 👋</h2>
+          <p>
+            I'm a Broadcasting and Media student with a growing passion for
+            digital storytelling, production, and multimedia communication. I'm
+            currently building my skills in video editing, scriptwriting, and
+            on-camera presentation. I’m interested in opportunities where I can
+            combine creativity with technology to produce compelling content
+            that resonates with diverse audiences.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="media/images/hero.jpeg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎬 Video Projects</h2>
+      <div class="media-grid">
+        <video controls>
+          <source src="media/video/project3.mp4" type="video/mp4" />
+        </video>
+        <video controls>
+          <source src="media/video/project2.mp4" type="video/mp4" />
+        </video>
+        <video controls>
+          <source src="media/video/project1.mp4" type="video/mp4" />
+        </video>
+        <video controls>
+          <source
+            src="media/video/copy_5D89D79B-EF63-4916-B4BF-A894ABB71E4D.mov"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </section>
+
+    <section>
+      <h2>📸 Photo Gallery</h2>
+      <div class="media-grid">
+        <img src="media/images/img1.png" alt="Photo 1" />
+        <img src="media/images/img2.png" alt="Photo 2" />
+        <img src="media/images/img3.jpeg" alt="Photo 3" />
+        <img src="media/images/img4.jpg" alt="Photo 4" />
+      </div>
+    </section>
+
+    <section>
+      <h2>🎧 Podcasts</h2>
+      <div class="media-grid">
+        <audio controls>
+          <source src="media/audio/podcast1.mp3" type="audio/mpeg" />
+        </audio>
+        <audio controls>
+          <source src="media/audio/podcast2.mp3" type="audio/mpeg" />
+        </audio>
+        <audio controls>
+          <source src="media/audio/podcast3.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </section>
+
+    <section>
+      <h2>📄 PDF Documents</h2>
+      <div class="media-grid pdf-grid">
+        <iframe src="media/pdf/document1.pdf"></iframe>
+        <iframe src="media/pdf/document2.pdf"></iframe>
+        <iframe src="media/pdf/document3.pdf"></iframe>
+        <iframe src="media/pdf/document4.pdf"></iframe>
+        <iframe src="media/pdf/document5.pdf"></iframe>
+      </div>
+    </section>
+  </body>
+</html>
